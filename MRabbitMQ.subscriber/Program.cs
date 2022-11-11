@@ -16,19 +16,12 @@ namespace MRabbitMQ.subscriber
 
             var channel = connection.CreateModel();
 
-            //   channel.QueueDeclare("hello-queue", true, false, false);
-
-              var randomQueueName = channel.QueueDeclare().QueueName;
-
-           // var randomQueueName = "log-database-save-queue";
-
-            channel.QueueBind(randomQueueName, "logs-fanout", "", null);
-
             channel.BasicQos(0, 1, false);
 
             var consumer = new EventingBasicConsumer(channel);
 
-            channel.BasicConsume(randomQueueName, false, consumer);
+            var queueName = "direct-queue-Critical";
+            channel.BasicConsume(queueName, false, consumer);
 
             Console.WriteLine("Loglar dinleniyor");
 
@@ -38,6 +31,8 @@ namespace MRabbitMQ.subscriber
                 var message = Encoding.UTF8.GetString(e.Body.ToArray());
 
                 Console.WriteLine("Gelen Mesaj: " + message);
+
+                File.AppendAllText("log-critical.txt", message + "\n");
 
                 channel.BasicAck(e.DeliveryTag, false);
             };
