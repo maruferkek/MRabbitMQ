@@ -16,13 +16,21 @@ namespace MRabbitMQ.subscriber
 
             var channel = connection.CreateModel();
 
-            channel.QueueDeclare("hello-queue", true, false, false);
+            //   channel.QueueDeclare("hello-queue", true, false, false);
+
+              var randomQueueName = channel.QueueDeclare().QueueName;
+
+           // var randomQueueName = "log-database-save-queue";
+
+            channel.QueueBind(randomQueueName, "logs-fanout", "", null);
 
             channel.BasicQos(0, 1, false);
 
             var consumer = new EventingBasicConsumer(channel);
 
-            channel.BasicConsume("hello-queue", false, consumer);
+            channel.BasicConsume(randomQueueName, false, consumer);
+
+            Console.WriteLine("Loglar dinleniyor");
 
             consumer.Received += (object? sender, BasicDeliverEventArgs e) =>
             {
