@@ -1,7 +1,9 @@
 ﻿
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using SharedLibrary;
 using System.Text;
+using System.Text.Json;
 
 namespace MRabbitMQ.subscriber
 {
@@ -39,7 +41,9 @@ namespace MRabbitMQ.subscriber
 
                 var message = Encoding.UTF8.GetString(e.Body.ToArray());
 
-                Console.WriteLine("Gelen Mesaj: " + message);
+                Product product = JsonSerializer.Deserialize<Product>(message);
+
+                Console.WriteLine($"Gelen Mesaj:   {product.Id} , {product.Name}");
 
                 File.AppendAllText("log-critical.txt", message + "\n");
 

@@ -27,3 +27,4 @@ log-type: Info.Error.Error
 log-type: Error.Error.Error
 log-type: Info.Error.Error
 header mesajım
+{"Id":1,"Name":"Kalem"}
