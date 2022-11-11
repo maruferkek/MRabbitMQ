@@ -22,9 +22,13 @@ namespace MRabbitMQ.subscriber
 
             var queueName = channel.QueueDeclare().QueueName;
 
-            var routekey = "*.Error.*";
+            Dictionary<string, object> headers = new Dictionary<string, object>();
 
-            channel.QueueBind(queueName, "logs-topic", routekey);
+            headers.Add("format", "pdf");
+            headers.Add("shape", "a4");
+            headers.Add("x-match", "all");
+
+            channel.QueueBind(queueName, "header-exchange", string.Empty,headers);
 
             channel.BasicConsume(queueName, false, consumer);
 
