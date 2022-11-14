@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRabbitMQ.publisher", "MRabbitMQ.publisher\MRabbitMQ.publisher.csproj", "{90D89EEE-32B4-4747-AD14-006CD5AD9508}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MRabbitMQ.publisher", "MRabbitMQ.publisher\MRabbitMQ.publisher.csproj", "{90D89EEE-32B4-4747-AD14-006CD5AD9508}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRabbitMQ.subscriber", "MRabbitMQ.subscriber\MRabbitMQ.subscriber.csproj", "{1D6561F9-EB19-498C-B652-63F024DBD7FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MRabbitMQ.subscriber", "MRabbitMQ.subscriber\MRabbitMQ.subscriber.csproj", "{1D6561F9-EB19-498C-B652-63F024DBD7FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{F33FC661-347D-41E8-AA33-40C9306466CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{F33FC661-347D-41E8-AA33-40C9306466CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRabbitMQWeb.Watermark", "MRabbitMQWeb.Watermark\MRabbitMQWeb.Watermark.csproj", "{6D0523FD-CB10-4F35-8066-4E78388C1286}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F33FC661-347D-41E8-AA33-40C9306466CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F33FC661-347D-41E8-AA33-40C9306466CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F33FC661-347D-41E8-AA33-40C9306466CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D0523FD-CB10-4F35-8066-4E78388C1286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D0523FD-CB10-4F35-8066-4E78388C1286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D0523FD-CB10-4F35-8066-4E78388C1286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D0523FD-CB10-4F35-8066-4E78388C1286}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
