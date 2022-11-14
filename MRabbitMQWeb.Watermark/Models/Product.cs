@@ -15,6 +15,6 @@ namespace MRabbitMQWeb.Watermark.Models
         [Range(1,1000)]
         public int Stock { get; set; }
         [StringLength(100)]
-        public string PictureUrl { get; set; }
+        public string? PictureUrl { get; set; }
     }
 }

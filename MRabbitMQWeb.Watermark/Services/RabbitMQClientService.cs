@@ -17,7 +17,6 @@ namespace MRabbitMQWeb.Watermark.Services
         {
             _logger = logger;
             _connectionFactory = connectionFactory;
-            Connect();
         }
 
         public IModel Connect()
