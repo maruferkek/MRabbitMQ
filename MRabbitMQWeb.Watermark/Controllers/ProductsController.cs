@@ -63,7 +63,7 @@ namespace MRabbitMQWeb.Watermark.Controllers
            
             if(ImageFile is { Length: > 0 })
             {
-                var randomImageName = Guid.NewGuid() + Path.GetExtension(ImageFile.Name);
+                var randomImageName = Guid.NewGuid() + Path.GetExtension(ImageFile.FileName);
 
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", randomImageName);
 
