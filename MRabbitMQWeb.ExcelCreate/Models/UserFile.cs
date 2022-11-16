@@ -16,7 +16,7 @@ namespace MRabbitMQWeb.ExcelCreate.Models
 
         public string FileName { get; set; }
 
-        public string FilePath { get; set; }
+        public string? FilePath { get; set; }
 
         public DateTime? CreatedDate { get; set; }
 

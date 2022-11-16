@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MRabbitMQWeb.ExcelCreate.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221116124723_initial")]
-    partial class initial
+    [Migration("20221116133119_filePathNullable")]
+    partial class filePathNullable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,7 +41,6 @@ namespace MRabbitMQWeb.ExcelCreate.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FilePath")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("FileStatus")
