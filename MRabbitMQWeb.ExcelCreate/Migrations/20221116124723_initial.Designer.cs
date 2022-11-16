@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MRabbitMQWeb.ExcelCreate.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221116121711_initial")]
+    [Migration("20221116124723_initial")]
     partial class initial
     {
         /// <inheritdoc />
